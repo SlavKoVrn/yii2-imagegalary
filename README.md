@@ -40,10 +40,10 @@ use slavkovrn\imagegalary\ImageGalaryWidget;
     'id' =>'imagegalary',       // id of plugin should be unique at page
     'class' =>'imagegalary',    // class of div to define style
     'css' => 'border:white;',   // css commands of class (for example - border-radius:5px;)
-    'image_width' => 320,       // height of image visible in widget
-    'image_height' => 240,      // width of image visible in widget
-    'thumb_width' => 80,        // height of thumb images
-    'thumb_height' => 50,       // width of thumb images
+    'image_width' => 320,       // height of image visible in pixels
+    'image_height' => 240,      // width of image visible in pixels
+    'thumb_width' => 80,        // height of thumb images in pixels
+    'thumb_height' => 50,       // width of thumb images in pixels
     'items' => 3,               // number of thumb items
     'images' => [               // images of galary
         [
