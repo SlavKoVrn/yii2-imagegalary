@@ -1,0 +1,26 @@
+{
+    "name": "slavkovrn/yii2-imagegalary",
+    "description": "The Yii2 extension uses jQuery PrettyPhoto and OwlCarousel js and makes image galary from php array of structure defined.",
+    "type": "yii2-extension",
+    "keywords": ["Yii2","extension","image galary","owlcarousel","prettyPhoto"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Viacheslav Kolesnikov",
+            "email": "slavko.chita@gmail.com",
+            "homepage": "http://yii2.kadastrcard.ru"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/SlavKoVrn/yii2-imagegalary.git"
+    },
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "minimum-stability" : "dev",
+    "autoload": {
+        "psr-4": {
+            "slavkovrn\\imagegalary\\": "src/"
+        }
+    }
+}
