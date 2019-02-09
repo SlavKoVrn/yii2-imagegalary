@@ -1,4 +1,4 @@
-<div class="row <?= $class ?>" style="width:<?= $div_width ?>px;height:<?= $div_height ?>px;text-align:center;">
+<div class="row <?= $class ?>" >
     <div id="<?= $id ?>-main-image" class="col-xs-12" style="text-align:center;margin:7px">
         <?php
 		$first=true;
@@ -6,16 +6,19 @@
 			if ($first){
 				$first=false;
 				$vid='';
-			}else
+                $image_id = 'id="main-image"';
+			}else{
 				$vid='style="display:none"';
+                $image_id = '';
+            }
         ?>
-    		<a <?= $vid; ?> href="<?= $img['src'] ?>" itemprop="image" class="zoom" title="<?= $img['title'] ?>" data-rel="prettyPhoto[<?= $id ?>]">
-                <img src="<?= $img['src'] ?>" title="<?= $img['title'] ?>" style="width:<?= $image_width ?>px;height:<?= $image_height ?>px;" />
+    		<a data-clicked="1" <?= $vid; ?> href="<?= $img['src'] ?>"" data-lightbox="<?= $id ?>" data-title="<?= $img['title'] ?>" >
+                <img <?= $image_id ?> src="<?= $img['src'] ?>" alt="<?= $img['title'] ?>" style="width:100%;max-height:300px;" />
             </a>
         <?php } ?>
     </div>
     <div class="col-xs-1" style="padding:0;margin:0;">
-        <img style="width:22px;cursor:pointer;" id="<?= $id ?>-left" src="<?= $left ?>" />
+        <img style="width:22px;cursor:pointer;" id="<?= $id ?>-left" src="<?= $left ?>" alt="Left" />
     </div>
     <div id="<?= $id ?>" class="col-xs-10">
         <?php foreach ($images as $img) { ?>
@@ -23,6 +26,6 @@
         <?php } ?>
     </div>
     <div class="col-xs-1" style="padding:0;margin:0;">
-        <img style="width:22px;cursor:pointer;padding:0;margin:0;" id="<?= $id ?>-right" src="<?= $right ?>" />
+        <img style="width:22px;cursor:pointer;padding:0;margin:0;" id="<?= $id ?>-right" src="<?= $right ?>" alt="Right" />
     </div>
 </div>
