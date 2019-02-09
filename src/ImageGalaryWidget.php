@@ -20,6 +20,7 @@ class ImageGalaryWidget extends Widget {
     private $div_height = 0;
     private $left='';
     private $right='';
+    private $loader='';
 
     public function init() {
 
@@ -57,6 +58,7 @@ class ImageGalaryWidget extends Widget {
 
         $this->left=$path[1].'/images/left.png';
         $this->right=$path[1].'/images/right.png';
+        $this->loader=$path[1].'/img/loader.gif';
 
         $this->getView()->registerCssFile($path[1] . '/css/owl.carousel.css');
         $this->getView()->registerCssFile($path[1] . '/css/owl.theme.css');
@@ -65,22 +67,12 @@ class ImageGalaryWidget extends Widget {
         $this->getView()->registerCss('.'.$this->class.'{'.$this->css.'}');
 
 
+        $this->getView()->registerJsFile($path[1] . '/js/jquery.js');
+        $this->getView()->registerJsFile($path[1] . '/js/jquery.prettyPhoto.min.js');
+        $this->getView()->registerJsFile($path[1] . '/js/jquery.prettyPhoto.init.min.js');
+
         $this->getView()->registerJsFile(
             $path[1] . '/js/owl.carousel.js',
-            [
-                'position' => \yii\web\View::POS_END,
-                'depends'  => ['\yii\web\JqueryAsset'],
-            ]
-        );
-        $this->getView()->registerJsFile(
-            $path[1] . '/js/jquery.prettyPhoto.min.js',
-            [
-                'position' => \yii\web\View::POS_END,
-                'depends'  => ['\yii\web\JqueryAsset'],
-            ]
-        );
-        $this->getView()->registerJsFile(
-            $path[1] . '/js/jquery.prettyPhoto.init.min.js',
             [
                 'position' => \yii\web\View::POS_END,
                 'depends'  => ['\yii\web\JqueryAsset'],
