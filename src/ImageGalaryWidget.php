@@ -9,6 +9,8 @@ class ImageGalaryWidget extends Widget {
     
     public $id = 'imagegalary';
     public $class = 'imagegalary';
+    public $image_width = '100%';
+    public $image_height = '300px';
     public $thumb_width = 0;
     public $thumb_height = 0;
     public $images = [];
@@ -16,12 +18,6 @@ class ImageGalaryWidget extends Widget {
     public $css = '';
     private $left='';
     private $right='';
-
-    public function init() {
-
-        parent::init();
-
-    }
 
     public function run() {
 
@@ -32,6 +28,8 @@ class ImageGalaryWidget extends Widget {
         return $this->render('imagegalary',[
             'id' =>$this->id,
             'class' =>$this->class,
+            'image_width' =>$this->image_width,
+            'image_height' =>$this->image_height,
             'thumb_width' =>$this->thumb_width,
             'thumb_height' =>$this->thumb_height,
             'left' =>$this->left,

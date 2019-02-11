@@ -13,7 +13,7 @@
             }
         ?>
     		<a data-clicked="1" <?= $vid; ?> href="<?= $img['src'] ?>"" data-lightbox="<?= $id ?>" data-title="<?= $img['title'] ?>" >
-                <img <?= $image_id ?> src="<?= $img['src'] ?>" alt="<?= $img['title'] ?>" style="width:100%;max-height:300px;" />
+                <img <?= $image_id ?> src="<?= $img['src'] ?>" alt="<?= $img['title'] ?>"  style="width:<?= $image_width ?>;height:<?= $image_height ?>;" />
             </a>
         <?php } ?>
     </div>
