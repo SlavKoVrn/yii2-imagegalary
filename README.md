@@ -1,6 +1,6 @@
 # Image galary widget for Yii2 Framework
 
-The Yii2 extension uses jQuery PrettyPhoto and OwlCarousel js and makes image galary from php array of structure defined.
+The Yii2 extension uses jQuery LightBox and OwlCarousel js and makes image galary from php array of structure defined.
 
 [Image galary PHP Array generator](http://yii2.kadastrcard.ru/imagegalary).
 
